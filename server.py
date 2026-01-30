@@ -7,7 +7,7 @@ import time
 import os
 from datetime import datetime
 
-PORT = int(os.environ.get('PORT', 8081))
+PORT = int(os.environ.get('PORT', 8080))
 
 class MetarHandler(http.server.SimpleHTTPRequestHandler):
     
@@ -387,7 +387,7 @@ class MetarHandler(http.server.SimpleHTTPRequestHandler):
                 </div>
                 
                 <div class="status-bar">
-                    <p>📊 It may take awhile...The site is busy pondering its existane <br>  Contact : AJAY YADAV (IMD GOA) <br>  ajaypahe02@gmail.com </p>
+                    <p>📊 It may take a while...The site is busy pondering its existane <br>  Contact : AJAY YADAV (IMD GOA) <br>  ajaypahe02@gmail.com </p>
                 </div>
             </div>
             
