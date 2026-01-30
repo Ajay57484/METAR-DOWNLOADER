@@ -910,11 +910,18 @@ class MetarHandler(http.server.SimpleHTTPRequestHandler):
                 in_taf = True
             
             # If we're in a TAF and line continues it
-            elif in_taf and (line.startswith(' ') or line.startswith('\t') or 
-                            line.startswith('BECMG') or line.startswith('TEMPO') or 
-                            line.startswith('FM') or line.startswith('PROB')):
-                # Check if this is a continuation of current TAF
-                current_taf.append(line.strip())
+            elif in_taf and (
+                              line.startswith(' ') or
+                             line.startswith('\t') or
+                             line.startswith('BECMG') or
+                             line.startswith('TEMPO') or
+                             line.startswith('FM') or
+                            line.startswith('PROB') or
+                             line.startswith('RMK') or
+                             re.match(r'^[A-Z]{4}\s', line)    # <--- Station code continuation
+                           ):
+                   current_taf.append(line.strip())
+
             
             # If line doesn't continue TAF
             elif in_taf and not (line.startswith(' ') or line.startswith('\t')):
