@@ -1194,7 +1194,7 @@ class MetarHandler(http.server.SimpleHTTPRequestHandler):
                         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
                             <a href="/download?station=VOGA&year=2024&month=01&type={report_type_lower}" 
                                style="background: #667eea; color: white; padding: 15px; border-radius: 10px; text-decoration: none; text-align: center;">
-                                VOGA (Priority)
+                                VOGA (Goa)
                             </a>
                             <a href="/download?station=VOMM&year=2024&month=01&type={report_type_lower}" 
                                style="background: #e0e0e0; color: #333; padding: 15px; border-radius: 10px; text-decoration: none; text-align: center;">
